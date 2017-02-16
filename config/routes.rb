@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # GET /cocktails/:id => show
   # GET /cocktails/new => new
   # POST /cocktails => create
+  root 'cocktails#index'
+  resources :cocktails, only: [:index, :show, :new, :create]
 end
